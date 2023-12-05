@@ -43,21 +43,27 @@ function findPalindromeWithSubtotal(e) {
     } else {
         alert("Subtotal requires a valid and numerical input!");
     }
-   
-    for (let i = 0; i < allPossiblePals.length; i++) {
-        let tipRow = document.createElement('tr');
-        tipRow.classList.add('generated')
-        tipContainer.append(tipRow);
-        let tipAmt = document.createElement('th');
-        let total = document.createElement('th');
-        let percent = document.createElement('th');
-        tipRow.append(tipAmt);
-        tipRow.append(total);
-        tipRow.append(percent);
-        tipAmt.innerText = `$${allPossiblePals[i].palindromeNumber}`;
-        total.innerText = `$${allPossiblePals[i].palindromeWithSubtotal}`;
-        percent.innerText = `${allPossiblePals[i].palindromeTipPercentage}%`;
+
+    if (allPossiblePals.length > 0) {
+        for (let i = 0; i < allPossiblePals.length; i++) {
+            let tipRow = document.createElement('tr');
+            tipRow.classList.add('generated')
+            tipContainer.append(tipRow);
+            let tipAmt = document.createElement('th');
+            let total = document.createElement('th');
+            let percent = document.createElement('th');
+            tipRow.append(tipAmt);
+            tipRow.append(total);
+            tipRow.append(percent);
+            tipAmt.innerText = `$${allPossiblePals[i].palindromeNumber}`;
+            total.innerText = `$${allPossiblePals[i].palindromeWithSubtotal}`;
+            percent.innerText = `${allPossiblePals[i].palindromeTipPercentage}%`;
+        }
+    } else {
+        alert("Unfortunately no results found within a reasonable range!")
     }
+   
+    
 
 }
 
