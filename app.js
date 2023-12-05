@@ -54,9 +54,9 @@ function findPalindromeWithSubtotal(e) {
         tipRow.append(tipAmt);
         tipRow.append(total);
         tipRow.append(percent);
-        tipAmt.innerText = `Tip Amount: $${allPossiblePals[i].palindromeNumber}`;
-        total.innerText = `Total Including Tip: $${allPossiblePals[i].palindromeWithSubtotal}`;
-        percent.innerText = `Tip Percentage ${allPossiblePals[i].palindromeTipPercentage}%`;
+        tipAmt.innerText = `$${allPossiblePals[i].palindromeNumber}`;
+        total.innerText = `$${allPossiblePals[i].palindromeWithSubtotal}`;
+        percent.innerText = `${allPossiblePals[i].palindromeTipPercentage}%`;
     }
 
 }
